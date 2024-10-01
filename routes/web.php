@@ -6,10 +6,21 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\AgencyController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\ApiControllerStatus;
+
 
 
 Route::get('login', [AuthController::class, 'showLoginPage'])->name('login');
 Route::get('register', [AuthController::class, 'showRegisterPage'])->name('register');
+
+
+
+////////
+
+Route::get('/api-setup', [ApiControllerStatus::class, 'index'])->name('api.setup.show');
+Route::post('/api-setup', [ApiControllerStatus::class, 'store'])->name('api.setup.store');
+
+/////////
 
 Route::prefix('dashboard')->group(function () {
     Route::get('/', [DashboardController::class, 'showDashboard'])->name('dashboard');
@@ -34,9 +45,9 @@ Route::prefix('dashboard')->group(function () {
     Route::delete('/agency/{id}', [AgencyController::class, 'destroy'])->name('agencies.destroy');
 
 
-    
-    
-    
+
+
+
 });
 // Route::get('/contact', [ContactController::class, 'index'])->name('contact');
 

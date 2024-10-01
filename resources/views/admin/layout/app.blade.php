@@ -142,6 +142,13 @@
             </li><!-- End Dashboard Nav -->
 
             <li class="nav-item">
+                <a class="nav-link " href="{{ route('api.setup.show') }}">
+                    <i class="bi bi-grid"></i>
+                    <span>API Setup</span>
+                </a>
+            </li>
+
+            <li class="nav-item">
                 <a class="nav-link " href="{{ route('gasbooking.form') }}">
                     <i class="bi bi-grid"></i>
                     <span>Gas Booking</span>
@@ -173,7 +180,7 @@
                 </ul>
             </li>
 
-            <li class="nav-item">
+            {{-- <li class="nav-item">
                 <a class="nav-link" data-bs-target="#forms-nav" data-bs-toggle="collapse" href="#" aria-expanded="true">
                     <i class="bi bi-journal-text"></i><span>Agency Setup</span><i class="bi bi-chevron-down ms-auto"></i>
                 </a>
@@ -191,7 +198,7 @@
 
 
                 </ul>
-            </li>
+            </li> --}}
 
             <li class="nav-item">
                 <a class="nav-link " href="{{ route('contacts.index') }}">
